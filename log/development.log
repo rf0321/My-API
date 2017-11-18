@@ -9981,3 +9981,1272 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/api/products.json" for 172.23.0.1 at 2017-11-15 12:39:19 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (26.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/products.json"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/sample_api.json" for 172.23.0.1 at 2017-11-15 12:39:39 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SampleApiController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sample_api" for 172.23.0.1 at 2017-11-15 12:45:37 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SampleApiController#index as HTML
+Started GET "/" for 172.23.0.1 at 2017-11-15 12:45:47 +0000
+Filter chain halted as :check_api_key rendered or redirected
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Completed 400 Bad Request in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (23.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered home/_authed.html.erb (0.8ms)
+Completed 200 OK in 131ms (Views: 2.5ms | ActiveRecord: 78.5ms)
+
+
+Started GET "/oauth_app/index" for 172.23.0.1 at 2017-11-15 12:45:50 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OauthAppController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered oauth_app/_oauth.html.erb (0.4ms)
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/oauth_app/show" for 172.23.0.1 at 2017-11-15 12:45:51 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OauthAppController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering oauth_app/show.html.erb within layouts/application
+  Rendered oauth_app/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 273ms (Views: 268.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sample_api.json" for 172.23.0.1 at 2017-11-15 12:53:47 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (uninitialized constant SampleApiController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+omniauth (1.7.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.7.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.7.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/rest_api" for 172.23.0.1 at 2017-11-15 12:57:16 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+NameError (undefined local variable or method `v1' for #<ActionDispatch::Routing::Mapper:0x007f5df2006610>):
+  
+config/routes.rb:4:in `block (3 levels) in <top (required)>'
+config/routes.rb:3:in `block (2 levels) in <top (required)>'
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/api/v1/rest_api" for 172.23.0.1 at 2017-11-15 12:58:10 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::RestApiController#index as HTML
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/v1/rest_api.json" for 172.23.0.1 at 2017-11-15 13:04:16 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::RestApiController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/descripition.json" for 172.23.0.1 at 2017-11-15 13:14:47 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/descripition.json"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 13:14:55 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 13:17:16 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 13:17:42 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/myapp/app/controllers/api/v1/description_controller.rb:27: syntax error, unexpected tIDENTIFIER, expecting '}'
+...uthentication Data'document_url: 'making now' }.to_json, sta...
+...                               ^
+/myapp/app/controllers/api/v1/description_controller.rb:27: syntax error, unexpected '}', expecting keyword_end
+...ta'document_url: 'making now' }.to_json, status:400
+...                               ^):
+  
+app/controllers/api/v1/description_controller.rb:27: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/controllers/api/v1/description_controller.rb:27: syntax error, unexpected '}', expecting keyword_end
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 13:17:55 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 13:20:42 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 13:21:00 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 13:21:37 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 13:22:25 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 13:22:45 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 13:22:50 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/" for 172.23.0.1 at 2017-11-15 13:24:09 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered home/_authed.html.erb (0.4ms)
+Completed 200 OK in 21ms (Views: 1.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 13:24:14 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-15 13:28:18 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered home/_authed.html.erb (0.4ms)
+Completed 200 OK in 19ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/destroy" for 172.23.0.1 at 2017-11-15 13:28:20 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3100/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-15 13:28:20 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendered home/_noauth.html.erb (0.4ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 172.23.0.1 at 2017-11-15 13:28:23 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/auth/github/callback?code=b4f4c71753df276d90f8&state=5f0876c8e52821a5ba73baa06327c6fa1ef2d1a6c4b82f15" for 172.23.0.1 at 2017-11-15 13:28:24 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"b4f4c71753df276d90f8", "state"=>"5f0876c8e52821a5ba73baa06327c6fa1ef2d1a6c4b82f15", "provider"=>"github"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `token=' for #<User:0x007f5df82a93a8>):
+  
+app/models/user.rb:6:in `block in create_with_oauth'
+app/models/user.rb:3:in `create_with_oauth'
+app/controllers/sessions_controller.rb:4:in `create'
+Started GET "/auth/github" for 172.23.0.1 at 2017-11-15 13:29:03 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/auth/github/callback?code=45962eebd5b0a50222e2&state=ed9f12995e9499195ea88439929492c8e5ffe62f916b70ff" for 172.23.0.1 at 2017-11-15 13:29:03 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"45962eebd5b0a50222e2", "state"=>"ed9f12995e9499195ea88439929492c8e5ffe62f916b70ff", "provider"=>"github"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (27.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "provider", "uid", "oauth_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "ItinoseSan"], ["provider", "github"], ["uid", "24353841"], ["oauth_token", "8d63a264addf59b205d14cbe49ec0d101f32c757"], ["created_at", "2017-11-15 13:29:05.653644"], ["updated_at", "2017-11-15 13:29:05.653644"]]
+  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3100/
+Completed 302 Found in 60ms (ActiveRecord: 43.7ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-15 13:29:05 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered home/_authed.html.erb (0.5ms)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/oauth_app/index" for 172.23.0.1 at 2017-11-15 13:30:44 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OauthAppController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered oauth_app/_oauth.html.erb (0.4ms)
+Completed 200 OK in 21ms (Views: 1.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/oauth_app/show" for 172.23.0.1 at 2017-11-15 13:30:45 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OauthAppController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering oauth_app/show.html.erb within layouts/application
+  Rendered oauth_app/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/destroy" for 172.23.0.1 at 2017-11-15 13:30:57 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3100/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-15 13:30:57 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendered home/_noauth.html.erb (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 172.23.0.1 at 2017-11-15 13:38:12 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/auth/github/callback?code=17fe9081c8c58b32ea55&state=54ea0b042238b923884b3466a05c74e1762d3d979a358d95" for 172.23.0.1 at 2017-11-15 13:38:12 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"17fe9081c8c58b32ea55", "state"=>"54ea0b042238b923884b3466a05c74e1762d3d979a358d95", "provider"=>"github"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "provider", "uid", "oauth_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "ItinoseSan"], ["provider", "github"], ["uid", "24353841"], ["oauth_token", "ffef6af65869d0ad16fa48b7bb02a7d1e946c7e7"], ["created_at", "2017-11-15 13:38:14.931298"], ["updated_at", "2017-11-15 13:38:14.931298"]]
+  [1m[35m (17.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3100/
+Completed 302 Found in 39ms (ActiveRecord: 23.0ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-15 13:38:14 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered home/_authed.html.erb (0.4ms)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/oauth_app/index" for 172.23.0.1 at 2017-11-15 13:38:34 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OauthAppController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered oauth_app/_oauth.html.erb (0.7ms)
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-15 13:38:56 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered home/_authed.html.erb (0.5ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/destroy" for 172.23.0.1 at 2017-11-15 13:38:58 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3100/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-15 13:38:58 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendered home/_noauth.html.erb (0.4ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 172.23.0.1 at 2017-11-15 13:38:59 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/auth/github/callback?code=f7ff51f67bada47f5464&state=c20e7a16be4d5dadea788e2d424ef944fe23c77966c10988" for 172.23.0.1 at 2017-11-15 13:39:00 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"f7ff51f67bada47f5464", "state"=>"c20e7a16be4d5dadea788e2d424ef944fe23c77966c10988", "provider"=>"github"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "provider", "uid", "oauth_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "ItinoseSan"], ["provider", "github"], ["uid", "24353841"], ["oauth_token", "c78749d9251667a7ba9016f4cfa507655175991e"], ["created_at", "2017-11-15 13:39:02.546001"], ["updated_at", "2017-11-15 13:39:02.546001"]]
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3100/
+Completed 302 Found in 21ms (ActiveRecord: 17.8ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-15 13:39:02 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered home/_authed.html.erb (0.4ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/oauth_app/index" for 172.23.0.1 at 2017-11-15 13:39:06 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OauthAppController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered oauth_app/_oauth.html.erb (0.5ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/oauth_app/show" for 172.23.0.1 at 2017-11-15 13:39:07 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OauthAppController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering oauth_app/show.html.erb within layouts/application
+  Rendered oauth_app/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 71ms (Views: 68.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/destroy" for 172.23.0.1 at 2017-11-15 13:39:45 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3100/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-15 13:39:45 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendered home/_noauth.html.erb (0.4ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 172.23.0.1 at 2017-11-15 13:39:46 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/auth/github/callback?code=e4747b8e3b1b73a1a16b&state=0633a65812662a6de4358b7e2d6f82a724f4839ae5e3d0df" for 172.23.0.1 at 2017-11-15 13:39:47 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"e4747b8e3b1b73a1a16b", "state"=>"0633a65812662a6de4358b7e2d6f82a724f4839ae5e3d0df", "provider"=>"github"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "provider", "uid", "oauth_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "ItinoseSan"], ["provider", "github"], ["uid", "24353841"], ["oauth_token", "12e27ced6da8f48420113e185e6442a464275a43"], ["created_at", "2017-11-15 13:39:49.414971"], ["updated_at", "2017-11-15 13:39:49.414971"]]
+  [1m[35m (12.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3100/
+Completed 302 Found in 16ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-15 13:39:49 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered home/_authed.html.erb (0.5ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/oauth_app/index" for 172.23.0.1 at 2017-11-15 13:39:51 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OauthAppController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered oauth_app/_oauth.html.erb (0.7ms)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/oauth_app/show" for 172.23.0.1 at 2017-11-15 13:39:51 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OauthAppController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering oauth_app/show.html.erb within layouts/application
+  Rendered oauth_app/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/oauth_app/show" for 172.23.0.1 at 2017-11-15 13:41:48 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OauthAppController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering oauth_app/show.html.erb within layouts/application
+  Rendered oauth_app/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/oauth_app/index" for 172.23.0.1 at 2017-11-15 13:43:17 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OauthAppController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered oauth_app/_oauth.html.erb (0.5ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/oauth_app/show" for 172.23.0.1 at 2017-11-15 13:43:18 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OauthAppController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering oauth_app/show.html.erb within layouts/application
+  Rendered oauth_app/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 13:48:02 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 13:55:03 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `oauth_token' for nil:NilClass):
+  
+app/controllers/api/v1/description_controller.rb:24:in `check_api_key'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 13:57:31 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 13:58:46 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 14:00:34 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 14:01:25 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 14:02:55 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+Module::DelegationError (ActionController::Metal#session delegated to @_request.session, but @_request is nil: #<Api::V1::DescriptionController:0x007f0d64119310>):
+  
+app/controllers/user_controller.rb:5:in `current_user'
+app/controllers/api/v1/description_controller.rb:4:in `initialize'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 14:03:54 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+Module::DelegationError (ActionController::Metal#session delegated to @_request.session, but @_request is nil: #<Api::V1::DescriptionController:0x000000020f6750>):
+  
+app/controllers/user_controller.rb:5:in `current_user'
+app/controllers/api/v1/description_controller.rb:4:in `initialize'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 14:04:44 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+Module::DelegationError (ActionController::Metal#session delegated to @_request.session, but @_request is nil: #<Api::V1::DescriptionController:0x007f0d6011ad40>):
+  
+app/controllers/user_controller.rb:5:in `current_user'
+app/controllers/api/v1/description_controller.rb:4:in `initialize'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 14:06:45 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 14:08:11 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 14:08:31 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 14:09:35 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 14:10:34 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 14:11:08 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `oauth_token' for nil:NilClass):
+  
+app/controllers/api/v1/description_controller.rb:19:in `check_api_key'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 14:12:13 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 14:12:50 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 14:14:17 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-15 14:14:29 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-18 11:48:54 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (26.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (19.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered home/_authed.html.erb (0.9ms)
+Completed 200 OK in 105ms (Views: 6.6ms | ActiveRecord: 54.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 11:49:12 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-18 11:59:20 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered home/_authed.html.erb (0.4ms)
+Completed 200 OK in 15ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/oauth_app/index" for 172.23.0.1 at 2017-11-18 11:59:36 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OauthAppController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered oauth_app/_oauth.html.erb (0.4ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/oauth_app/show" for 172.23.0.1 at 2017-11-18 11:59:40 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OauthAppController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering oauth_app/show.html.erb within layouts/application
+  Rendered oauth_app/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 477ms (Views: 467.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/destroy" for 172.23.0.1 at 2017-11-18 11:59:48 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3100/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-18 11:59:48 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendered home/_noauth.html.erb (0.4ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:17:43 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- json/jwt):
+  
+app/controllers/api/v1/description_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:17:55 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:21:21 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Filter chain halted as :check_api_key rendered or redirected
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:21:32 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- json/jwt):
+  
+app/models/oauth.rb:1:in `<top (required)>'
+app/controllers/api/v1/description_controller.rb:7:in `block (2 levels) in index'
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:22:27 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authkey' for Oauth:Class):
+  
+app/models/oauth.rb:11:in `profile'
+app/controllers/api/v1/description_controller.rb:7:in `block (2 levels) in index'
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:22:57 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authkey' for Oauth:Class):
+  
+app/models/oauth.rb:11:in `profile'
+app/controllers/api/v1/description_controller.rb:7:in `block (2 levels) in index'
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:23:36 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `oauth_data' for Oauth:Class):
+  
+app/models/oauth.rb:18:in `authkey'
+app/models/oauth.rb:11:in `profile'
+app/controllers/api/v1/description_controller.rb:7:in `block (2 levels) in index'
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:24:29 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template api/v1/description/{"id":1,"name":"Itinose","created_at":"Hoge","updated_at":"Foo"}, user/{"id":1,"name":"Itinose","created_at":"Hoge","updated_at":"Foo"}, sessions/{"id":1,"name":"Itinose","created_at":"Hoge","updated_at":"Foo"}, application/{"id":1,"name":"Itinose","created_at":"Hoge","updated_at":"Foo"} with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/myapp/app/views"
+):
+  
+app/controllers/api/v1/description_controller.rb:7:in `block (2 levels) in index'
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:25:52 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template api/v1/description/index, user/index, sessions/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/myapp/app/views"
+):
+  
+app/controllers/api/v1/description_controller.rb:7:in `block (2 levels) in index'
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:26:32 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+No template found for Api::V1::DescriptionController#index, rendering head :no_content
+Completed 204 No Content in 118ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:26:58 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+No template found for Api::V1::DescriptionController#index, rendering head :no_content
+Completed 204 No Content in 143ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:27:26 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+No template found for Api::V1::DescriptionController#index, rendering head :no_content
+Completed 204 No Content in 134ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:30:35 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+No template found for Api::V1::DescriptionController#index, rendering head :no_content
+Completed 204 No Content in 94ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:30:41 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+No template found for Api::V1::DescriptionController#index, rendering head :no_content
+Completed 204 No Content in 34ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:30:46 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+No template found for Api::V1::DescriptionController#index, rendering head :no_content
+Completed 204 No Content in 100ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:31:27 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+No template found for Api::V1::DescriptionController#index, rendering head :no_content
+Completed 204 No Content in 62ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:31:36 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+No template found for Api::V1::DescriptionController#index, rendering head :no_content
+Completed 204 No Content in 27ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:31:50 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+No template found for Api::V1::DescriptionController#index, rendering head :no_content
+Completed 204 No Content in 168ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:32:12 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template api/v1/description/index, user/index, sessions/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/myapp/app/views"
+):
+  
+app/controllers/api/v1/description_controller.rb:7:in `block (2 levels) in index'
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:33:38 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+No template found for Api::V1::DescriptionController#index, rendering head :no_content
+Completed 204 No Content in 66ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:34:07 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+No template found for Api::V1::DescriptionController#index, rendering head :no_content
+Completed 204 No Content in 85ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:35:41 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:36:09 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:36:22 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 211ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:36:38 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 55ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:48:09 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 96ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:49:24 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:52:24 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `json' for #<Api::V1::DescriptionController:0x007ff5888602d8>):
+  
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:52:54 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `json' for #<Api::V1::DescriptionController:0x007ff592912168>):
+  
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:53:03 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `json' for #<Api::V1::DescriptionController:0x007ff59495c0b8>):
+  
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:53:49 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:54:02 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 88ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:54:05 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 127ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:56:38 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:57:35 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 120ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:58:56 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 78ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:59:11 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 117ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 12:59:56 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 13:00:28 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 74ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-18 13:03:36 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<HomeController:0x000000044c10b8>):
+  
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for 172.23.0.1 at 2017-11-18 13:03:45 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendered home/_noauth.html.erb (0.3ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 172.23.0.1 at 2017-11-18 13:03:49 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/auth/github/callback?code=bc62f2545b205659affa&state=71030946f419850e8b195eea6400679e77d8a2b55e8a1d21" for 172.23.0.1 at 2017-11-18 13:03:49 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"bc62f2545b205659affa", "state"=>"71030946f419850e8b195eea6400679e77d8a2b55e8a1d21", "provider"=>"github"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (34.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "provider", "uid", "oauth_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "ItinoseSan"], ["provider", "github"], ["uid", "24353841"], ["oauth_token", "795a3276df763c9672fb1930331bbe667d96e5f7"], ["created_at", "2017-11-18 13:03:51.771262"], ["updated_at", "2017-11-18 13:03:51.771262"]]
+  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3100/
+Completed 302 Found in 66ms (ActiveRecord: 53.7ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-18 13:03:51 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendered home/_noauth.html.erb (0.4ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-18 13:04:37 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered home/_authed.html.erb (0.3ms)
+Completed 200 OK in 11ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-18 13:06:17 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered home/_authed.html.erb (0.7ms)
+Completed 200 OK in 14ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-18 13:07:28 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered home/_authed.html.erb (0.4ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 13:11:52 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Hash):
+  
+app/models/oauth.rb:22:in `oauth_data'
+app/models/oauth.rb:18:in `authkey'
+app/models/oauth.rb:11:in `profile'
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 13:12:39 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Hash):
+  
+app/models/oauth.rb:22:in `oauth_data'
+app/models/oauth.rb:18:in `authkey'
+app/models/oauth.rb:11:in `profile'
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 13:13:57 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Hash):
+  
+app/models/oauth.rb:22:in `oauth_data'
+app/models/oauth.rb:18:in `authkey'
+app/models/oauth.rb:11:in `profile'
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 13:14:39 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 182ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Hash):
+  
+app/models/oauth.rb:22:in `oauth_data'
+app/models/oauth.rb:18:in `authkey'
+app/models/oauth.rb:11:in `profile'
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 13:15:33 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 222ms (ActiveRecord: 0.0ms)
+
+
+  
+JWT::IncorrectAlgorithm (Expected a different algorithm):
+  
+app/models/oauth.rb:22:in `oauth_data'
+app/models/oauth.rb:18:in `authkey'
+app/models/oauth.rb:11:in `profile'
+app/controllers/api/v1/description_controller.rb:5:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 13:15:51 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+No template found for Api::V1::DescriptionController#index, rendering head :no_content
+Completed 204 No Content in 81ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 13:16:19 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+No template found for Api::V1::DescriptionController#index, rendering head :no_content
+Completed 204 No Content in 155ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 13:16:33 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template api/v1/description/index, user/index, sessions/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/myapp/app/views"
+):
+  
+app/controllers/api/v1/description_controller.rb:6:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 13:17:46 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template api/v1/description/index, user/index, sessions/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/myapp/app/views"
+):
+  
+app/controllers/api/v1/description_controller.rb:6:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 13:18:41 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template api/v1/description/index, user/index, sessions/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/myapp/app/views"
+):
+  
+app/controllers/api/v1/description_controller.rb:6:in `index'
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 13:19:45 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 45ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 13:20:23 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 161ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 13:20:56 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 60ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/description.json" for 172.23.0.1 at 2017-11-18 13:21:44 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::DescriptionController#index as JSON
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.23.0.1 at 2017-11-18 13:23:39 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered home/_authed.html.erb (0.4ms)
+Completed 200 OK in 19ms (Views: 1.4ms | ActiveRecord: 3.8ms)
+
+

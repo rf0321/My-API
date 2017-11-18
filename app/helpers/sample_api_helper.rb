@@ -1,0 +1,2 @@
+module SampleApiHelper
+end

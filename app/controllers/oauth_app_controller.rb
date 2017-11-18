@@ -10,11 +10,8 @@ class OauthAppController < UserController
 
   def show
     if current_user
-      string_key = OpenSSL::PKey::RSA.new.to_s
-      decoded_key = string_key.delete("-BEGINPUBLCKEY")
-      #@your_key = decoded_key
       @name = current_user.name
-
+      @your_key = current_user.oauth_token
     else
       redirect_to root_path
     end
