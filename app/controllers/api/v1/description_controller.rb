@@ -1,24 +1,25 @@
 class Api::V1::DescriptionController < UserController
-  before_action :check_api_key
-
+  before_action :authenticate
+  include ActionController::HttpAuthentication::Token::ControllerMethods
   def index
-    data = Oauth.profile(1,"Foo","Hoge","Foo")
-    render json: data
-  end
-  def add_permit
-
-  end
-  private
-  def product_params
-    params.require(:product).permit(:name)
+    render json: { info: 'Test', num: 234454 }
   end
 
-  # api keyのチェック
-  def check_api_key
-    if request.headers['Authorization'] == 'token'
-      return true
-    else
-      render json: { message: 'Bad Authentication Data',document_url: 'making now' }.to_json, status:400
-   end
+  protected
+  def authenticate
+    authenticate_token || render_unauthorized
+  end
+
+  def authenticate_token
+    authenticate_with_http_token do |token, options|
+      token == 'FOO'
+    end
+  end
+
+  def render_unauthorized
+    # render_errors(:unauthorized, ['invalid token'])
+    obj = { message: 'Requires Authentication' }
+    render json: obj, status: :unauthorized
   end
 end
+

@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-     resources :description, :only => [:index, :create]
+      resources :description, :only => [:index]
     end
   end
- # Use API root
   root 'home#index'
   get  'oauth_app/index'
   get  'oauth_app/show'

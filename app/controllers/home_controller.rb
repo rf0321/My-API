@@ -1,10 +1,7 @@
 class HomeController < UserController
   def index
-    if current_user
-      @id = current_user.id
-      @name = current_user.name
-      @date = current_user.created_at
-      @date2 = current_user.to_json
+    if authenticated_user
+      @name = authenticated_user.name
       render partial: 'authed'
     else
       render partial: 'noauth'
