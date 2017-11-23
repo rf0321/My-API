@@ -1,7 +1,7 @@
 class OauthAppController < UserController
   def index
     if authenticated_user
-      @name = authenticated_user.name
+      @name = authenticated_user.to_json
       render partial: 'oauth_app/oauth'
     else
       redirect_to root_path
@@ -10,7 +10,7 @@ class OauthAppController < UserController
 
   def show
     if authenticated_user
-     @token = JsonWebToken.private_key
+
     else
       redirect_to root_path
     end

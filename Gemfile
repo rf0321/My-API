@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 # Use Gem for OAuth authentication
 gem 'jwt'
+gem 'grape', '0.16.2'
+gem 'doorkeeper'
 # Use Gem for GitHub authentication
 gem 'figaro'
 gem 'omniauth-github'
@@ -34,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'rake'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

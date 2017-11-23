@@ -1,18 +1,21 @@
 class Api::V1::DescriptionController < UserController
-  before_action :authenticate
+  before_action :authentication
   include ActionController::HttpAuthentication::Token::ControllerMethods
   def index
-    render json: { info: 'Test', num: 234454 }
+      id = authenticated_user.id
+      name = authenticated_user.name
+      created_at = authenticated_user.created_at
+      updated_at = authenticated_user.updated_at
+      render json: { id: id, name: name, created_at: created_at, updated_at: updated_at }
   end
 
-  protected
-  def authenticate
-    authenticate_token || render_unauthorized
+  def authentication
+    authenticate_token || authenticated_user || render_unauthorized
   end
 
   def authenticate_token
     authenticate_with_http_token do |token, options|
-      token == 'FOO'
+      token == 'testtoken00810'
     end
   end
 
