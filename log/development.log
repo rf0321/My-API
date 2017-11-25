@@ -25137,3 +25137,36 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[35m (13.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDoorkeeperTables (20171125020136)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDoorkeeperTables (20171125020136)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (395.0ms)[0m  [1m[35mCREATE TABLE "oauth_applications" ("id" bigserial primary key, "name" character varying NOT NULL, "uid" character varying NOT NULL, "secret" character varying NOT NULL, "redirect_uri" text NOT NULL, "scopes" character varying DEFAULT '' NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (31.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_oauth_applications_on_uid" ON "oauth_applications"  ("uid")[0m
+  [1m[35m (49.6ms)[0m  [1m[35mCREATE TABLE "oauth_access_grants" ("id" bigserial primary key, "resource_owner_id" integer NOT NULL, "application_id" bigint NOT NULL, "token" character varying NOT NULL, "expires_in" integer NOT NULL, "redirect_uri" text NOT NULL, "created_at" timestamp NOT NULL, "revoked_at" timestamp, "scopes" character varying)[0m
+  [1m[35m (31.0ms)[0m  [1m[35mCREATE  INDEX  "index_oauth_access_grants_on_application_id" ON "oauth_access_grants"  ("application_id")[0m
+  [1m[35m (23.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_oauth_access_grants_on_token" ON "oauth_access_grants"  ("token")[0m
+  [1m[35m (10.7ms)[0m  [1m[35mALTER TABLE "oauth_access_grants" ADD CONSTRAINT "fk_rails_b4b53e07b8"
+FOREIGN KEY ("application_id")
+  REFERENCES "oauth_applications" ("id")
+[0m
+  [1m[35m (71.3ms)[0m  [1m[35mCREATE TABLE "oauth_access_tokens" ("id" bigserial primary key, "resource_owner_id" integer, "application_id" bigint, "token" character varying NOT NULL, "refresh_token" character varying, "expires_in" integer, "revoked_at" timestamp, "created_at" timestamp NOT NULL, "scopes" character varying, "previous_refresh_token" character varying DEFAULT '' NOT NULL)[0m
+  [1m[35m (31.5ms)[0m  [1m[35mCREATE  INDEX  "index_oauth_access_tokens_on_application_id" ON "oauth_access_tokens"  ("application_id")[0m
+  [1m[35m (39.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_oauth_access_tokens_on_token" ON "oauth_access_tokens"  ("token")[0m
+  [1m[35m (31.3ms)[0m  [1m[35mCREATE  INDEX  "index_oauth_access_tokens_on_resource_owner_id" ON "oauth_access_tokens"  ("resource_owner_id")[0m
+  [1m[35m (23.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_oauth_access_tokens_on_refresh_token" ON "oauth_access_tokens"  ("refresh_token")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "oauth_access_tokens" ADD CONSTRAINT "fk_rails_732cb83ab7"
+FOREIGN KEY ("application_id")
+  REFERENCES "oauth_applications" ("id")
+[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171125020136"]]
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (11.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
